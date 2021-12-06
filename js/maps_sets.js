@@ -82,3 +82,35 @@ const currencies2 = new Map([
 for (const [key, value] of currencies2.entries()) {
   console.log(`${key}: ${value}`);
 }
+
+// Sets - Javascript set is a collection of unique values. Each value can occur only once in a set.
+
+// Creating a Set - You can create a set by passing an array to the new Set() constructor
+const letters1 = new Set(["a", "b", "c"]);
+console.log(letters1); // Result - Set(3) {'a', 'b', 'c'}
+
+// add() Method - To add the elements to the set.
+
+const letters2 = new Set();
+letters2.add("d");
+letters2.add("e");
+console.log(letters2); // Result - Set(2) {'d', 'e'}
+
+// forEach() Method - It calls a function for each set element
+const letters3 = new Set(["a", "b", "c", "d", "e", "f"]);
+
+letters3.forEach((value, key) => {
+  console.log(value, key); // Here the result for the key will be same as that of the value, bcoz set does not have any keys.
+});
+
+// values() Method - Returns the new iterator object containing all the values in a set
+const letters4 = new Set(["a", "b", "c", "d"]);
+console.log(letters4.values()); // Result - SetIterator {'a', 'b', 'c', 'd'}
+
+let text = "";
+for (const x of letters4.values()) {
+  console.log(x);
+  text += x;
+}
+
+console.log(text);
